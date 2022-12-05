@@ -1,0 +1,400 @@
+.header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url(/src/images/header/header-home-background-mobile.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(/src/images/header/header-home-background-mobile@2x.png);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/images/header/header-home-background-tablet.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/header/header-home-background-tablet@2x.png);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(/src/images/header/header-home-background-desktop.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/header/header-home-background-desktop@2x.png);
+    }
+  }
+}
+
+.library {
+  background-image: url(/src/images/header/header-library-background-mobile.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(/src/images/header/header-library-background-mobile@2x.png);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/images/header/header-library-background-tablet.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/header/header-library-background-tablet@2x.png);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(/src/images/header/header-library-background-desktop.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/header/header-library-background-desktop@2x.png);
+    }
+  }
+}
+
+.header__home {
+  padding-top: 40px;
+  padding-bottom: 44px;
+}
+
+.header__library {
+  padding-top: 40px;
+  padding-bottom: 62px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 60px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 54px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+
+  outline: transparent;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 10px;
+  }
+}
+
+.nav__logo:hover .nav__logo-title {
+  color: $button-color;
+}
+
+.nav__logo:hover .nav__logo-icon {
+  stroke: $button-color;
+}
+
+.nav__logo-icon {
+  stroke: $header-text-color;
+
+  transition: $main-animation;
+}
+
+.nav__logo-title {
+  @include text-design(500, 30px, calc(35 / 30), 0.03em);
+  color: $header-text-color;
+
+  transition: $main-animation;
+
+  order: 2;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+    border: 0;
+  }
+
+  &:hover {
+    color: $button-color;
+    transform: scale(0.97);
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    gap: 39px;
+  }
+}
+
+.nav__link {
+  position: relative;
+
+  @include text-design(400, 12px, calc(14 / 12), 0.03em);
+  color: $header-text-color;
+
+  outline: transparent;
+
+  transition: $main-animation;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $button-color;
+  }
+}
+.nav__item {
+  transition: 50ms;
+}
+
+.hover__scale:hover {
+  transform: scale(0.97);
+}
+
+.nav__link.current::after {
+  content: '';
+
+  position: absolute;
+  display: block;
+  bottom: -5;
+  left: 0;
+
+  height: 3px;
+  width: 100%;
+
+  background-color: $header-underline-color;
+}
+
+// ---------------ФОРМА---------------
+
+.header__form {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  max-width: 394px;
+}
+
+.header__input {
+  text-transform: uppercase;
+  width: 280px;
+  @include text-design(400, 14px, calc(16 / 14), 0.03em);
+  color: $header-text-color;
+  background-color: transparent;
+  border-bottom: 1px solid $header-text-color;
+  outline: transparent;
+  border-radius: 15px;
+  padding: 10px;
+  transition: $main-animation;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 107, 2, 0.129);
+    border-color: $button-color;
+    color: $button-color;
+    transform: scale(1.05);
+  }
+  &:focus {
+    background-color: rgba(255, 107, 2, 0.129);
+    backdrop-filter: blur(90px);
+    border-color: $button-color;
+    color: $button-color;
+  }
+}
+
+.darkmode .header__input {
+  color: $darkmode-color-one;
+  &:hover {
+    background-color: #03b9a722;
+    transform: scale(1.05);
+    border-color: #03b9a7;
+  }
+  &:focus {
+    background-color: #03b9a727;
+    backdrop-filter: blur(90px);
+    border-color: #03b9a7;
+  }
+}
+
+::placeholder {
+  @include text-design(400, 12px, calc(16 / 14), 0.03em);
+  color: $header-text-color;
+}
+
+.header__button-search {
+  position: absolute;
+  right: 15;
+  bottom: 10;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    right: 45;
+  }
+
+  background-color: transparent;
+}
+
+.darkmode .header__form:hover .header__button-search .header__search-icon {
+  stroke: #03b9a7;
+}
+
+.header__form:hover .header__button-search .header__search-icon {
+  stroke: $button-color;
+  transform: scale(1.5);
+}
+
+.header__search-icon {
+  stroke: $header-text-color;
+  fill: none;
+  transition: $main-animation;
+}
+
+.header__form-message {
+  margin-top: 16px;
+
+  @include text-design(400, 14px, calc(16 / 14), 0.01em);
+  color: $header-underline-color;
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+
+    margin-top: 20px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+// ----------------КНОПКИ-----------------
+
+.header__button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 16px;
+  }
+}
+
+.header__button {
+  padding: 14px 37px 12px 37px;
+
+  @include text-design(500, 12px, calc(16 / 12), 0.03em);
+  color: $header-text-color;
+
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid $header-text-color;
+  outline: transparent;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    padding: 13px 57px 13px 57px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 13px 41px 11px 41px;
+  }
+}
+
+.header__button--active {
+  background-color: $modal-button-color;
+  border: transparent;
+  box-shadow: 0 8px 43px rgba(255, 107, 1, 0.6);
+}
+
+// ----------------- DARKMODE -----------------
+
+.theme {
+  position: relative;
+
+  background-color: transparent;
+  border: transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.theme {
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.theme__container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 11;
+
+  height: 50px;
+  width: 50px;
+}
+
+.theme__icon-dark {
+  position: absolute;
+  top: 0;
+  left: -2px;
+
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 260%);
+
+  transition: $main-animation;
+}
+
+.theme__icon-dark--hide {
+  transform: translateX(70px);
+
+  opacity: 0;
+}
+
+.theme__icon-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translate(-14%, -14%);
+  transition: $main-animation;
+}
+
+.theme__icon-light--hide {
+  transform: translateX(70px);
+
+  opacity: 0;
+}

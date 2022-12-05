@@ -1,0 +1,304 @@
+// -----------------DARKMODE CHANGE STYLE----------------
+
+.darkmode {
+  background-color: $background-color;
+}
+
+// -----------------darkmode header-----------------
+
+.darkmode .nav__logo:hover .nav__logo-title {
+  color: $darkmode-color-one;
+}
+
+.darkmode .nav__logo:hover .nav__logo-icon {
+  stroke: $darkmode-color-one;
+}
+
+.darkmode .nav__logo-icon {
+  stroke: $header-color;
+}
+
+.darkmode .nav__logo-title {
+  color: $header-color;
+}
+
+.darkmode .nav__link {
+  color: $header-color;
+
+  &:hover {
+    color: $darkmode-color-one;
+  }
+}
+
+.darkmode .nav__link.current::after {
+  background-color: $darkmode-color-three;
+}
+
+.darkmode ::placeholder {
+  color: $header-color;
+}
+
+.darkmode .header__input {
+  border-color: $header-color;
+
+  &:hover {
+    border-color: $darkmode-color-one;
+  }
+}
+
+.darkmode .header__search-icon {
+  stroke: $header-color;
+  fill: none;
+
+  &:hover {
+    stroke: $darkmode-color-one;
+  }
+}
+
+.darkmode .header__form-message {
+  color: $darkmode-color-three;
+}
+
+.darkmode .header__button {
+  background-color: $header-color;
+}
+
+.darkmode .header__button--active {
+  background-color: $darkmode-color-two;
+  box-shadow: 0 8px 43px $darkmode-color-two;
+}
+
+// -----------------darkmode hero-----------------
+
+.darkmode .films__title {
+  color: $darkmode-color-one;
+}
+
+.darkmode .films__genres {
+  color: $darkmode-color-two;
+}
+
+// -----------------darkmode modal-----------------
+
+.darkmode .modal {
+  background-color: $background-color;
+}
+
+.darkmode .card__film-title,
+.darkmode .card__about {
+  color: $darkmode-color-two;
+}
+
+.darkmode .btn-wrapper button {
+  background-color: $header-color;
+  border: transparent;
+
+  &:hover {
+    background-color: $darkmode-color-two;
+    color: $header-text-color;
+  }
+}
+
+.darkmode .card__info-wrapper,
+.darkmode .card__subdivision,
+.darkmode .card__description {
+  color: $darkmode-color-one;
+}
+
+.darkmode .card__vote-title {
+  background-color: $darkmode-color-two;
+}
+
+.darkmode .card__vote-number {
+  color: $background-color;
+  background-color: $header-color;
+}
+
+.darkmode .icon-close {
+  stroke: $darkmode-color-two;
+  &:hover {
+    stroke: $darkmode-color-one;
+  }
+}
+
+.darkmode .trailer__icon {
+  fill: $darkmode-color-one;
+  transition: 250ms;
+}
+.darkmode .trailer__btn:hover .trailer__icon {
+  fill: $darkmode-color-two;
+  stroke: $darkmode-color-two;
+}
+
+.darkmode .trailer__btn {
+  color: $darkmode-color-one;
+  &:hover {
+    color: $darkmode-color-two;
+  }
+}
+
+// -----------------scroll up----------------
+
+.darkmode #back-to-top,
+.darkmode #back-to-top:hover {
+  background-color: $darkmode-color-two;
+}
+
+// -----------------darkmode pagination-----------------
+
+.darkmode .tui-pagination .tui-page-btn {
+  color: $header-text-color;
+  border: 1px solid $darkmode-color-two;
+}
+
+.darkmode .tui-pagination .tui-page-btn:hover {
+  background-color: $darkmode-color-two;
+}
+
+.darkmode .tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  color: $header-text-color;
+  background-color: $darkmode-color-two;
+}
+
+.darkmode .tui-page-inputs .tui-page-input {
+  color: $header-text-color;
+}
+
+.darkmode .tui-page-btn {
+  background-color: $darkmode-color-one;
+  border-radius: 50%;
+}
+
+// -----------------darkmode footer-----------------
+
+.darkmode .footer {
+  background-color: $footer-color-darkmode;
+}
+
+.darkmode .footer__list-item,
+.darkmode .footer__btn {
+  color: $header-color;
+}
+
+.darkmode .footer__btn:hover {
+  color: $darkmode-color-one;
+}
+
+.darkmode .footer__list-icon {
+  fill: $darkmode-color-two;
+}
+
+// -----------------modal team-----------------
+
+.darkmode .modal-team {
+  background-color: $background-color;
+}
+
+.darkmode .team__title {
+  color: $darkmode-color-two;
+}
+
+.darkmode .team__name {
+  color: $darkmode-color-one;
+}
+
+.darkmode .team__position {
+  color: $darkmode-color-two;
+}
+
+.darkmode .icon-github {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: $darkmode-color-two;
+  // fill: currentColor;
+}
+
+// -----------------register form-----------------
+
+.darkmode .register-form__close-btn {
+  &:hover {
+    background-color: #1b6db9;
+  }
+}
+
+.darkmode #loginUser {
+  color: $header-color;
+}
+
+.darkmode .header__btn-login {
+  color: $register-form-text-color;
+  border-color: $register-form-text-color;
+  background-color: #4cbcb1cc;
+}
+
+.darkmode .header__btn-login:hover,
+.darkmode .header__btn-login:focus {
+  background: #43b9ae;
+}
+
+.darkmode .register-form__sign-in {
+  background-color: #4cbcb1;
+}
+
+.darkmode .register-form__tite,
+.darkmode .register-form__link,
+.darkmode .register-form__pre-tite {
+  color: $register-form-text-color;
+}
+
+.darkmode .register-form__btn {
+  border: transparent;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.darkmode .overlay-right {
+  background-color: #321259;
+  // backdrop-filter: blur(1px);
+}
+
+.darkmode .overlay-left {
+  background-color: #321259;
+}
+
+.darkmode .register-form__sign-up {
+  background-color: #4cbcb1;
+}
+
+.darkmode .register-form__text {
+  color: $register-form-text-color;
+}
+
+.darkmode .register-form__btn {
+  background-color: #46256f;
+  color: $register-form-text-color;
+}
+
+.darkmode .ghost {
+  background-color: #4cbcb1;
+}
+
+.darkmode .register-form__sign-in ::placeholder {
+  color: $register-form-text-color;
+}
+
+.darkmode .register-form__input {
+  color: $register-form-text-color;
+}
+
+.darkmode .errorlabel {
+  color: $darkmode-color-three;
+}
+
+.darkmode .register-form__sign-up ::placeholder {
+  color: $register-form-text-color;
+}
+
+.darkmode .overlay {
+  background: #1b6db9;
+}

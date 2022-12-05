@@ -1,0 +1,29 @@
+//Normalize
+
+@import './common';
+
+//Utils
+
+@import './utils/mixins';
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/spinner';
+@import './utils/darkmode';
+
+//Base
+
+@import './base/body';
+@import './base/container';
+
+//Layout
+@import './layout/films';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/modal-film';
+@import './layout/modal-team';
+@import './layout/pagination';
+@import './layout/library.scss';
+
+// additional
+@import './layout/up-button';
+@import './layout/registration-form';
